@@ -108,3 +108,6 @@ analise_notas(loja3, "Loja 3")
 analise_notas(loja4, "Loja 4")
 ```
 
+![Media de avaliação loja 1 e 2](./images/imagem011.jpg)
+
+![Media de avaliação loja 3 e 4](./images/imagem012.jpg)
