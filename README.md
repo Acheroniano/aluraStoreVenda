@@ -10,3 +10,7 @@ https://colab.research.google.com/drive/1xQvJUpLlBEk1vSLc6TcByC_DhSqa7ziV?usp=sh
 ### Analise do faturamento
 
 ![Análise do faturamento](./images/imagem002.jpg)
+
+### Gráfico em Pizza do Faturamento por loja
+
+![Gráfico em Pizza](./images/imagem003.jpg)
