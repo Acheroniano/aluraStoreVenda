@@ -89,6 +89,8 @@ graficobarra_vendas_categoria(loja4, "Loja 4")
 
 ### Média de avaliação dos clientes para cada loja, individualizar a média de avaliação para cada vendedor.
 
+###### OBS: Perceba que o dataset de cada loja, possuei os mesmos vendedores, assuma-se que eles fazem rodizio trabalhando suas vendas em todas as lojas:
+
 ```python
 # prompt: calcule a média de avaliação das lojas. usando o campo: Avaliação da compra para cada loja, inclua a avaliação individual de cada vendedor por loja, use o campo Vendedor
 
@@ -111,3 +113,38 @@ analise_notas(loja4, "Loja 4")
 ![Media de avaliação loja 1 e 2](./images/imagem011.jpg)
 
 ![Media de avaliação loja 3 e 4](./images/imagem012.jpg)
+
+### Gráfico em linha mostrando a avaliação individual dos vendedores por loja.
+
+```python
+# prompt: use grafico em linha e mostre a avaliação média dos clientes, individualize por loja, identifique o vendedor melhor e pior avaliado por loja
+
+def avaliacao_de_vendedores(df, nome_da_loja):
+    notas_vendedor = df.groupby('Vendedor')['Avaliação da compra'].mean().sort_values()
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(notas_vendedor.index, notas_vendedor.values, marker='o', linestyle='-')
+    plt.title(f'Avaliação Média dos Vendedores na {nome_da_loja}')
+    plt.xlabel('Vendedor')
+    plt.ylabel('Avaliação Média')
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(True)
+    plt.tight_layout()
+
+    # Identificar o melhor e pior vendedor
+    melhor_vendedor = notas_vendedor.idxmax()
+    pior_vendedor = notas_vendedor.idxmin()
+
+    plt.scatter(melhor_vendedor, notas_vendedor[melhor_vendedor], color='green', s=100, zorder=5, label=f'Melhor: {melhor_vendedor} ({notas_vendedor[melhor_vendedor]:.2f})')
+    plt.scatter(pior_vendedor, notas_vendedor[pior_vendedor], color='red', s=100, zorder=5, label=f'Pior: {pior_vendedor} ({notas_vendedor[pior_vendedor]:.2f})')
+
+    plt.legend()
+    plt.show()
+
+# Gerar gráficos de avaliação por vendedor para cada loja
+avaliacao_de_vendedores(loja, "Loja 1")
+avaliacao_de_vendedores(loja2, "Loja 2")
+avaliacao_de_vendedores(loja3, "Loja 3")
+avaliacao_de_vendedores(loja4, "Loja 4")
+```
+
