@@ -86,3 +86,25 @@ graficobarra_vendas_categoria(loja4, "Loja 4")
 ![Vendas por Categoria Loja 3](./images/imagem009.jpg)
 
 ![Vendas por Categoria Loja 4](./images/imagem010.jpg)
+
+### Média de avaliação dos clientes para cada loja, individualizar a média de avaliação para cada vendedor.
+
+```python
+# prompt: calcule a média de avaliação das lojas. usando o campo: Avaliação da compra para cada loja, inclua a avaliação individual de cada vendedor por loja, use o campo Vendedor
+
+# Função para calcular a média de avaliação geral da loja e por vendedor
+def analise_notas(df, nome_da_loja):
+  media_nota_loja = df['Avaliação da compra'].mean()
+  print(f"\nMédia de avaliação geral da {nome_da_loja}: {media_nota_loja:.2f}")
+
+  media_nota_vendedor = df.groupby('Vendedor')['Avaliação da compra'].mean()
+  print(f"Média de avaliação por vendedor na {nome_da_loja}:")
+  print(round(media_nota_vendedor,2))
+
+# Analisar avaliações em cada loja
+analise_notas(loja, "Loja 1")
+analise_notas(loja2, "Loja 2")
+analise_notas(loja3, "Loja 3")
+analise_notas(loja4, "Loja 4")
+```
+
