@@ -148,3 +148,12 @@ avaliacao_de_vendedores(loja3, "Loja 3")
 avaliacao_de_vendedores(loja4, "Loja 4")
 ```
 
+
+![Media de avaliação loja 1](./images/imagem013.jpg)
+
+![Media de avaliação loja 2](./images/imagem014.jpg)
+
+![Media de avaliação loja 3](./images/imagem015.jpg)
+
+![Media de avaliação loja 4](./images/imagem016.jpg)
+
