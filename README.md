@@ -79,3 +79,10 @@ graficobarra_vendas_categoria(loja2, "Loja 2")
 graficobarra_vendas_categoria(loja3, "Loja 3")
 graficobarra_vendas_categoria(loja4, "Loja 4")
 ```
+![Vendas por Categoria Loja 1](./images/imagem007.jpg)
+
+![Vendas por Categoria Loja 2](./images/imagem008.jpg)
+
+![Vendas por Categoria Loja 3](./images/imagem009.jpg)
+
+![Vendas por Categoria Loja 4](./images/imagem010.jpg)
