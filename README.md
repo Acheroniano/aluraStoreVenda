@@ -157,3 +157,52 @@ avaliacao_de_vendedores(loja4, "Loja 4")
 
 ![Media de avaliação loja 4](./images/imagem016.jpg)
 
+### Produtos Mais e Menos Vendidos por categoria e por loja e por Vendedor e por loja.
+
+```python
+# prompt: Identifique os produtos mais vendidos e menos vendidos por categoria e por loja, por vendedor e por loja. use os campos: Produtoo, Categoria do Produto, Preço, Vendedor
+
+# Concatena os dataframes de todas as lojas
+todas_lojas = pd.concat([loja.assign(Loja='Loja 1'),
+                         loja2.assign(Loja='Loja 2'),
+                         loja3.assign(Loja='Loja 3'),
+                         loja4.assign(Loja='Loja 4')])
+
+# Produtos mais e menos vendidos por categoria e por loja
+print("\nProdutos mais e menos vendidos por categoria e por loja:")
+produtos_por_categoria_loja = todas_lojas.groupby(['Loja', 'Categoria do Produto', 'Produto']).size().reset_index(name='Quantidade')
+
+for loja_nome in todas_lojas['Loja'].unique():
+    df_loja = produtos_por_categoria_loja[produtos_por_categoria_loja['Loja'] == loja_nome]
+    print(f"\n--- {loja_nome} ---")
+    for categoria in df_loja['Categoria do Produto'].unique():
+        df_categoria = df_loja[df_loja['Categoria do Produto'] == categoria]
+        produto_mais_vendido = df_categoria.loc[df_categoria['Quantidade'].idxmax()]
+        produto_menos_vendido = df_categoria.loc[df_categoria['Quantidade'].idxmin()]
+        print(f"  Categoria: {categoria}")
+        print(f"    Mais vendido: {produto_mais_vendido['Produto']} ({produto_mais_vendido['Quantidade']} vendas)")
+        print(f"    Menos vendido: {produto_menos_vendido['Produto']} ({produto_menos_vendido['Quantidade']} vendas)")
+
+# Produtos mais e menos vendidos por vendedor e por loja
+print("\nProdutos mais e menos vendidos por vendedor e por loja:")
+produtos_por_vendedor_loja = todas_lojas.groupby(['Loja', 'Vendedor', 'Produto']).size().reset_index(name='Quantidade')
+
+for loja_nome in todas_lojas['Loja'].unique():
+    df_loja = produtos_por_vendedor_loja[produtos_por_vendedor_loja['Loja'] == loja_nome]
+    print(f"\n--- {loja_nome} ---")
+    for vendedor in df_loja['Vendedor'].unique():
+        df_vendedor = df_loja[df_loja['Vendedor'] == vendedor]
+        if not df_vendedor.empty:
+            produto_mais_vendido = df_vendedor.loc[df_vendedor['Quantidade'].idxmax()]
+            produto_menos_vendido = df_vendedor.loc[df_vendedor['Quantidade'].idxmin()]
+            print(f"  Vendedor: {vendedor}")
+            print(f"    Mais vendido: {produto_mais_vendido['Produto']} ({produto_mais_vendido['Quantidade']} vendas)")
+            print(f"    Menos vendido: {produto_menos_vendido['Produto']} ({produto_menos_vendido['Quantidade']} vendas)")
+        else:
+            print(f"  Vendedor: {vendedor} - Sem vendas registradas.")
+```
+
+#### Loja 01: Produtos mais e menos vendidos.
+
+![Media de avaliação loja 4](./images/imagem017.jpg)
+
