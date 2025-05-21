@@ -221,4 +221,6 @@ for loja_nome in todas_lojas['Loja'].unique():
 
 ![Produtos Vendidos da loja 4](./images/imagem020.jpg)
 
+#### Loja 01 e Loja 02>: Produtos mais e menos vendidos por vendedor.
 
+![Produtos Vendidos por vendedor da loja 1 e loja 2](./images/imagem021.jpg)
