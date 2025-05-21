@@ -204,5 +204,21 @@ for loja_nome in todas_lojas['Loja'].unique():
 
 #### Loja 01: Produtos mais e menos vendidos.
 
-![Media de avaliação loja 4](./images/imagem017.jpg)
+![Produtos Vendidos da loja 1](./images/imagem017.jpg)
+
+
+#### Loja 02: Produtos mais e menos vendidos.
+
+![Produtos Vendidos da loja 2](./images/imagem018.jpg)
+
+
+#### Loja 03: Produtos mais e menos vendidos.
+
+![Produtos Vendidos da loja 3](./images/imagem019.jpg)
+
+
+#### Loja 04: Produtos mais e menos vendidos.
+
+![Produtos Vendidos da loja 4](./images/imagem020.jpg)
+
 
