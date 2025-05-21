@@ -1,7 +1,5 @@
 # aluraStoreVenda
 
-- [Introdução](#introdução)
-- [Metodologia](#metodologia)
 - [Relatório Final](#relatório-final)
 
 #### link do notebook do projeto (Análise de dados em python para indicar a venda de uma de quatro lojas)
