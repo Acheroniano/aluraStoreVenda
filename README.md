@@ -323,6 +323,8 @@ calcula_frete(loja4, "Loja 4")
 
 ![Frete médio das lojas](./images/imagem027.jpg)
 
+### Gráfico de barra horizontal, demonstrando o frete médio das lojas.
+
 ```python
 # prompt: gere um gráfico em formato de barra horizontal demonstrando a média do frete de cada loja, 1 gráfico apenas
 
@@ -347,4 +349,43 @@ plt.title('Frete Médio por Loja')
 plt.gca().invert_yaxis() # Inverter o eixo y para ter a Loja 1 no topo
 plt.show()
 ```
+
+![Frete médio das lojas](./images/imagem028.jpg)
+
+# Relatório Final:
+
+###### Como pode-se observar os gráficos gerados com a análise de dados, todas as lojas tem um 
+###### comportamento muito semelhante.
+###### Há praticamente um empate técnino em todos os critérios de medição utilizados/solicitados.
+###### Portanto, devo sugerir:
+###### a - Voltar a analisar mais profundamente os dados utilizados, onde possa se encontrar mais dados técnicos para chegar a uma conclusão.
+###### b - Coletar os dados novamente (arquivos .csv) para verificar se houve erro na coleta dos dados.
+###### c - Com as informações técnicas obtidas com a análise de dados, a recomendação mais prudente, é manter todas as lojas, 
+######     treinar os vendedores para que o faturamento cresça e encontrar maneiras de diminuir o gasto operacionar para melhorar a eficiência do negócio.
+
+### Fábio Samuel dos Santos Canedo
+
+<div>
+   <a href="https://www.paypal.com/donate/?business=C5ZXDE6A7M28E&no_recurring=0&item_name=Donation+for+Owner+of+this+PayPal+Account&currency_code=BRL" target="_blank">
+       <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-color.svg" alt="PayPal Donation" width="100" height="50">
+   </a><br>
+   @@@ Doações:<br>Pix: altaperformancenubank@gmail.com<br>
+</div>
+<br>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/f%C3%A1bio-samuel-dos-santos-canedo-2708b533/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Acheroniano)
+
+[![Amazon](https://img.shields.io/badge/Amazon%20Mais%20Vendidos-39E09B?style=social&logo=amazon&logoColor=39E09B)](https://amzn.to/3SYdXzY)
+[![Amazon](https://img.shields.io/badge/Amazon%20Ofertas-39E09B?style=social&logo=amazon&logoColor=39E09B)](https://amzn.to/3XbudAb)
+
+<h2> 🤖 Tecnologias utilizadas</h2>
+
+<div>
+  <a href="https://www.w3schools.com/python" target="_new"><img src="https://img.shields.io/badge/python-239120?style=for-the-badge&logo=python&logoColor=white" alt="html link"></a>
+   <!-- <a href="https://www.w3schools.com/js" target="_new"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=blue" alt="html link"></a>
+-->
+</div>
+
+
 
