@@ -229,5 +229,75 @@ for loja_nome in todas_lojas['Loja'].unique():
 
 ![Produtos Vendidos por vendedor da loja 3 e loja 4](./images/imagem022.jpg)
 
+### Gráfico Coluna-linha, demonstrando a categoria que mais vende e menos vende por loja.
+
+```python
+# prompt: Gere gráfico de coluna-linha, demonstrando a categoria que mais vende e a categoria que menos vende, por loja.
+
+# Função para criar o gráfico de coluna-linha
+def grafico_coluna_linha_categoria(df, nome_da_loja):
+    vendas_categoria = df['Categoria do Produto'].value_counts()
+
+    # Criar o gráfico de barras
+    fig, ax1 = plt.subplots(figsize=(10, 6))
+    ax1.bar(vendas_categoria.index, vendas_categoria.values, color='skyblue', label='Quantidade de Vendas')
+    ax1.set_xlabel('Categoria do Produto')
+    ax1.set_ylabel('Quantidade de Vendas', color='skyblue')
+    ax1.tick_params(axis='y', labelcolor='skyblue')
+    ax1.set_title(f'Vendas de Categorias e Destaques na {nome_da_loja}')
+    ax1.set_xticks(range(len(vendas_categoria.index)))  # Set ticks first
+    ax1.set_xticklabels(vendas_categoria.index, rotation=45, ha='right')
+
+    # Identificar a categoria mais e menos vendida
+    melhor_categoria = vendas_categoria.idxmax()
+    pior_categoria = vendas_categoria.idxmin()
+
+    # Criar um segundo eixo y para os destaques (linha)
+    ax2 = ax1.twinx()
+    # Criamos uma lista para plotar no segundo eixo, com 1 para a melhor e -1 para a pior
+    destaques = [1 if cat == melhor_categoria else (-1 if cat == pior_categoria else 0) for cat in vendas_categoria.index]
+    ax2.plot(vendas_categoria.index, destaques, color='red', marker='o', linestyle='dashed', markersize=8, label='Destaque')
+    ax2.set_ylabel('Destaque (1: Melhor, -1: Pior)', color='red')
+    ax2.tick_params(axis='y', labelcolor='red')
+    # Definir os ticks do segundo eixo para representar os destaques
+    ax2.set_yticks([-1, 0, 1])
+    ax2.set_yticklabels(['Pior', '', 'Melhor'])
+    ax2.grid(False) # Remove a grade do segundo eixo
+
+    # Adicionar rótulos para as categorias mais e menos vendidas no gráfico
+    ax1.text(melhor_categoria, vendas_categoria[melhor_categoria], f' {vendas_categoria[melhor_categoria]}', color='green', ha='left', va='bottom', fontsize=9, weight='bold')
+    ax1.text(pior_categoria, vendas_categoria[pior_categoria], f' {vendas_categoria[pior_categoria]}', color='red', ha='left', va='top', fontsize=9, weight='bold')
+
+    # Adicionar legendas
+    lines, labels = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax2.legend(lines + lines2, labels + labels2, loc='upper right')
+
+
+    plt.tight_layout()
+    plt.show()
+
+# Gerar o gráfico de coluna-linha para cada loja
+grafico_coluna_linha_categoria(loja, "Loja 1")
+grafico_coluna_linha_categoria(loja2, "Loja 2")
+grafico_coluna_linha_categoria(loja3, "Loja 3")
+grafico_coluna_linha_categoria(loja4, "Loja 4")
+```
+
+#### Loja 01: Produtos mais e menos vendidos por categoria.
+
+![Produtos Vendidos por categoria da loja 1](./images/imagem023.jpg)
+
+#### Loja 02: Produtos mais e menos vendidos por categoria.
+
+![Produtos Vendidos por categoria da loja 2](./images/imagem024.jpg)
+
+#### Loja 03: Produtos mais e menos vendidos por categoria.
+
+![Produtos Vendidos por categoria da loja 3](./images/imagem025.jpg)
+
+#### Loja 04: Produtos mais e menos vendidos por categoria.
+
+![Produtos Vendidos por categoria da loja 4](./images/imagem026.jpg)
 
 
