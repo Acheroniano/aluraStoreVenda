@@ -224,3 +224,10 @@ for loja_nome in todas_lojas['Loja'].unique():
 #### Loja 01 e Loja 02>: Produtos mais e menos vendidos por vendedor.
 
 ![Produtos Vendidos por vendedor da loja 1 e loja 2](./images/imagem021.jpg)
+
+#### Loja 03 e Loja 04>: Produtos mais e menos vendidos por vendedor.
+
+![Produtos Vendidos por vendedor da loja 3 e loja 4](./images/imagem022.jpg)
+
+
+
