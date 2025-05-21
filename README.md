@@ -1,6 +1,8 @@
 # aluraStoreVenda
 
-1 - Relatório Final : clique aqui [Link Text](#Relatório Final:)
+- [Introdução](#introdução)
+- [Metodologia](#metodologia)
+- [Relatório Final](#relatório-final)
 
 #### link do notebook do projeto (Análise de dados em python para indicar a venda de uma de quatro lojas)
 https://colab.research.google.com/drive/1xQvJUpLlBEk1vSLc6TcByC_DhSqa7ziV?usp=sharing
