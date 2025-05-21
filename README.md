@@ -319,3 +319,32 @@ calcula_frete(loja3, "Loja 3")
 calcula_frete(loja4, "Loja 4")
 ```
 
+#### Frete médio das lojas.
+
+![Frete médio das lojas](./images/imagem027.jpg)
+
+```python
+# prompt: gere um gráfico em formato de barra horizontal demonstrando a média do frete de cada loja, 1 gráfico apenas
+
+# Calcular o frete médio para cada loja
+frete_medio_loja1 = loja['Frete'].mean()
+frete_medio_loja2 = loja2['Frete'].mean()
+frete_medio_loja3 = loja3['Frete'].mean()
+frete_medio_loja4 = loja4['Frete'].mean()
+
+# Criar um dataframe com os fretes médios
+fretes_medios = pd.DataFrame({
+    'Loja': ['Loja 1', 'Loja 2', 'Loja 3', 'Loja 4'],
+    'Frete Médio': [frete_medio_loja1, frete_medio_loja2, frete_medio_loja3, frete_medio_loja4]
+})
+
+# Gerar o gráfico de barras horizontal
+plt.figure(figsize=(10, 6))
+plt.barh(fretes_medios['Loja'], fretes_medios['Frete Médio'], color='skyblue')
+plt.xlabel('Frete Médio (R$)')
+plt.ylabel('Loja')
+plt.title('Frete Médio por Loja')
+plt.gca().invert_yaxis() # Inverter o eixo y para ter a Loja 1 no topo
+plt.show()
+```
+
