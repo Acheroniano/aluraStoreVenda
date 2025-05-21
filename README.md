@@ -354,14 +354,14 @@ plt.show()
 
 # Relatório Final:
 
-###### Como pode-se observar os gráficos gerados com a análise de dados, todas as lojas tem um 
-###### comportamento muito semelhante.
-###### Há praticamente um empate técnino em todos os critérios de medição utilizados/solicitados.
-###### Portanto, devo sugerir:
-###### a - Voltar a analisar mais profundamente os dados utilizados, onde possa se encontrar mais dados técnicos para chegar a uma conclusão.
-###### b - Coletar os dados novamente (arquivos .csv) para verificar se houve erro na coleta dos dados.
-###### c - Com as informações técnicas obtidas com a análise de dados, a recomendação mais prudente, é manter todas as lojas, 
-######     treinar os vendedores para que o faturamento cresça e encontrar maneiras de diminuir o gasto operacionar para melhorar a eficiência do negócio.
+#### Como pode-se observar nos gráficos gerados com a análise de dados, todas as lojas tem um 
+#### comportamento muito semelhante.
+#### Há praticamente um empate técnino em todos os critérios de medição utilizados/solicitados.
+#### Portanto, devo sugerir:
+#### a - Voltar a analisar mais profundamente os dados utilizados, e tentar encontrar mais dados técnicos para chegar a uma conclusão diferente da atual.
+#### b - Coletar os dados novamente (arquivos .csv) para verificar se houve erro na coleta dos dados.
+#### c - Com as informações técnicas obtidas nessa análise de dados, a recomendação mais prudente, é manter todas as lojas. 
+####     - Sugestão: Treinar os vendedores para que o faturamento cresça, encontrar maneiras de diminuir o gasto operacionale com isso melhorar a eficiência do negócio.
 
 ### Fábio Samuel dos Santos Canedo
 
