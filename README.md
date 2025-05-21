@@ -300,4 +300,22 @@ grafico_coluna_linha_categoria(loja4, "Loja 4")
 
 ![Produtos Vendidos por categoria da loja 4](./images/imagem026.jpg)
 
+### Frete Médio por loja.
+
+###### Descobrir o frete médio por loja.
+
+```python
+# prompt: Descubra o frete médio de cada loja
+
+# Função para calcular o frete médio por loja
+def calcula_frete(df, nome_da_loja):
+  frete_medio = df['Frete'].mean()
+  print(f"\nFrete médio da {nome_da_loja}: R$ {frete_medio:.2f}")
+
+# Calcular e exibir o frete médio para cada loja
+calcula_frete(loja, "Loja 1")
+calcula_frete(loja2, "Loja 2")
+calcula_frete(loja3, "Loja 3")
+calcula_frete(loja4, "Loja 4")
+```
 
